@@ -34,6 +34,7 @@
 body {
     margin: 0;
     color: #000;
+    background: #fff
 }
 
 .header {
@@ -266,4 +267,11 @@ body {
 .tech-themes a{
     font-size: 14px;
     margin-left: 63px;
+}
+
+.index .picture{
+    width: 1000px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 150px;
 }
