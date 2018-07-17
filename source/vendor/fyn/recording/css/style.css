@@ -1,0 +1,85 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.clearfix{*+height:1%;}
+ul.nav{
+	width: 100%;
+	line-height: 60px;
+	border-bottom: solid 1px #cdcdcd;
+}
+ul.nav li{
+	display: inline-block;
+	width: 49%;
+	text-align: center;
+	box-sizing: border-box;
+}
+ul.nav li:nth-child(1){
+	border-right:solid 1px #cdcdcd;
+}
+.income{
+	margin: 10px
+}
+.expend{
+	margin: 10px;
+	display: none;
+}
+.in{
+	line-height: 30px;
+	position: relative;
+}
+.in input{
+	height: 28px;
+	border: solid 1px #cdcdcd;
+	width: 100%;
+}
+.in .desc{
+	float: left;
+	width: 50%;
+	color: #757575;
+	padding-right: 12px;
+    box-sizing: border-box;
+}
+.in .value{
+	float: left;
+	width: 50%;
+	color: #222222;
+	padding-right: 12px;
+    box-sizing: border-box;
+}
+.in .edit{
+	position: absolute;
+	right: 32px;
+	width: 16px;
+	margin-top: 6px;
+}
+.in .delete{
+	position: absolute;
+	right: 0;
+	width: 16px;
+	margin-top: 6px;
+}
+.calculate{
+	height: 30px;
+	width: 100px;
+	line-height: 30px;
+	background: #f95759;
+	color: #fff;
+	text-align: center;
+	margin: 10px auto;
+	border-radius: 30px;
+}
+.result{
+	display: none;
+	text-align: center;
+}
+.r_num{
+	font-size: 30px;
+}
+.r_num.z{
+	color: green;
+}
+.r_num.f{
+	color: red;
+}

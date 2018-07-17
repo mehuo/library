@@ -1,0 +1,30 @@
+.table > thead > tr > th, 
+.table > tbody > tr > th, 
+.table > tfoot > tr > th, 
+.table > thead > tr > td, 
+.table > tbody > tr > td, 
+.table > tfoot > tr > td {
+    border-top: 1px solid #e5e5e5;
+    vertical-align: middle;
+    word-wrap: break-word;
+}
+.layout-fixed {
+  margin-bottom: 0;
+  table-layout: fixed;
+}
+.thead-bg{
+  border-bottom: solid 1px #e5e5e5;
+  background: #F9F9F9;
+  border-radius: 5px 5px 0 0;
+}
+.tbody-font {
+    font-size: 13px;
+    color: #888888;
+}
+.table-border{
+  width: 100%;
+  margin: 2px 0;
+  border: solid 1px #e5e5e5;
+  border-radius: 5px 5px 0 0;
+  /* border-collapse: separate; */
+}

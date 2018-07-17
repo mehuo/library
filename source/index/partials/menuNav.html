@@ -1,0 +1,18 @@
+<div class="menu-nav">
+    <div class="left">
+        <img class="logo" src="/img/index/logob.png" alt="">
+        <!-- <div class="sys-name">魅惑</div> -->
+        <div class="clearfix"></div>
+    </div>
+    <div class="right">
+        <ul>
+            <li ng-repeat="item in menus" ng-mouseenter="openDrop($event)" ng-mouseleave="closeDrop($event)">
+                <a href="{{item.url}}" target="{{item.target}}">{{item.name}}</a>
+                <ul class="dropdown-menu" ng-show="item.subs.length>0">
+                    <li ng-repeat="menu in item.subs"><a href="{{menu.url}}">{{menu.name}}</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="clearfix"></div>
+</div>

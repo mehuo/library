@@ -1,0 +1,51 @@
+.left-nav{
+  width: 240px;
+  border: solid 1px #cdcdcd;
+}
+.menu_list {
+    width: 100%;
+    padding-left: 0;
+    margin: 0 auto;
+    text-align:left
+}
+.menu_nav{
+  padding: 12px 0 0 0 ;
+  border-bottom: 1px dashed #f9f9f9;
+  background: #fff;
+}
+.menu_list .menu_head{
+  color: #000;
+  font-size: 18px;
+  line-height: 18px;
+  margin: 8px 0;
+  padding-bottom: 12px;
+}
+.menu_list .menu_head a{
+  color: #000;
+}
+.menu_list .icon-down{
+  float: right;
+  padding-right: 15px;
+  padding-top: 8px;
+}
+.icon{
+  float: left;
+  padding-right: 12px;
+  height: 18px;
+  padding-left: 13px;
+}
+
+
+.menu_body{
+  background: #fff;
+  display:none;
+  z-index:90;
+  padding: 8px 0;
+}
+.menu_body .menu_child{
+  font-size: 16px;
+  padding: 8px 0;
+  color: #888888;
+  display: block;
+  padding-left: 48px;
+}

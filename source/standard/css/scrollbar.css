@@ -1,0 +1,38 @@
+ #bar {
+    width: 500px;
+    height: 300px;
+    overflow-x: auto;
+    /*容器div沿x轴翻转180度（把滚动条放到上方），沿y轴翻转180度 rotateY(180deg)（把滚动条留在右方）*/
+    transform: rotatex(180deg);
+}
+
+#content {
+    width: 600px;
+    height: 500px;
+    /*容器翻转之后内容也翻转了，所以要翻回来*/
+    transform: rotatex(180deg);
+}
+
+/* 滚动条样式 */
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: none;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #e1e3e4;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+::-webkit-scrollbar:horizontal {
+    height: 6px;
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+    background: #CDCDCD;
+}

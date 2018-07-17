@@ -1,0 +1,32 @@
+.fTree{
+
+}
+.fTree li{
+	list-style:none;
+	position: relative;
+}
+.fTree li.open:before{
+	content: '';
+    position: absolute;
+    width: 16px;
+    height: 12px;
+    top: 6px;
+    left: 0;
+    background: url(tree_icons.png);
+    background-position: -7px -6px;
+}
+.fTree li.close:before{
+	content: '';
+    position: absolute;
+    width: 16px;
+    height: 12px;
+    top: 6px;
+    left: 0;
+    background: url(tree_icons.png);
+    background-position: -7px -18px;
+}
+.fTree li a{
+	font-size: 12px;
+	color: #757575;
+	margin-left: 16px;
+}

@@ -1,0 +1,119 @@
+/* 开关样式 */
+.switch {
+    position: relative;
+    top: 5px;
+}
+
+.switch label {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: block;
+}
+
+.switch input {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 100;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.switch.demo3 {
+    width: 86px;
+    height: 26px;
+}
+
+.switch.demo3 label {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #999999;
+    padding-left: 3px;
+    border: solid 1px #999999;
+    border-radius: 40px;
+    color: #fff
+}
+
+.switch.demo3 label:after {
+    content: "";
+    z-index: -1;
+    top: -8px;
+    right: -8px;
+    bottom: -8px;
+    left: -8px;
+    border-radius: inherit;
+    background: #ababab;
+    background: -moz-linear-gradient(#f2f2f2, #ababab);
+    background: -ms-linear-gradient(#f2f2f2, #ababab);
+    background: -o-linear-gradient(#f2f2f2, #ababab);
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#f2f2f2), to(#ababab));
+    background: -webkit-linear-gradient(#f2f2f2, #ababab);
+    background: linear-gradient(#f2f2f2, #ababab);
+}
+
+.switch.demo3 label:before {
+    content: "";
+}
+
+.switch.demo3 label i {
+    display: block;
+    height: 20px;;
+    width: 20px;
+    border-radius: inherit;
+    background: silver;
+    position: absolute;
+    z-index: 2;
+    top: 2px;
+    background: #b2ac9e;
+    background: -moz-linear-gradient(#f7f2f6, #b2ac9e);
+    background: -ms-linear-gradient(#f7f2f6, #b2ac9e);
+    background: -o-linear-gradient(#f7f2f6, #b2ac9e);
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#f7f2f6), to(#b2ac9e));
+    background: -webkit-linear-gradient(#f7f2f6, #f7f2f6);
+    background: linear-gradient(#fff, #f7f2f6);
+    box-shadow: inset 0 1px 0 white, 0 0 2px rgba(0, 0, 0, 0.3), 0 0px 0px rgba(0, 0, 0, 0.2)
+}
+
+.switch.demo3 label i:after {
+    content: "";
+}
+
+.switch.demo3 label i:before {
+    content: "未开启";
+    text-transform: uppercase;
+    font-style: normal;
+    color: #fff;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    position: absolute;
+    line-height: 20px;
+    left: 27px;
+    width: 86px;
+}
+
+.switch.demo3 input:checked ~ label {
+    background: #428bca;
+    border: 0;
+}
+
+.switch.demo3 input:checked ~ label i {
+    right: 3%;
+    top: 3px;
+}
+
+.switch.demo3 input:checked ~ label i:before {
+    content: "已开启";
+    color: #fff;
+    font-size: 14px;
+    font-family: Helvetica, Arial, sans-serif;
+    position: absolute;
+    width: 86px;
+    left: -52px;
+    line-height: 20px;
+}

@@ -1,0 +1,16 @@
+.page-search .btn-32 {
+    height: 34px;
+    padding: 0 16px;
+    font-size: 14px;
+    line-height: 28px;
+    vertical-align: middle;
+}
+
+.page-search .red-btn{
+    z-index: 9;
+    color: #ffffff;
+    border-radius: 20px;
+    background: #f95759;
+    border: solid 2px #f95759;
+    border-radius: 0 5px 5px 0
+}

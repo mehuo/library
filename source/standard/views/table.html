@@ -1,0 +1,51 @@
+<div>
+    <h6>带描述表头  奇数行有背景颜色</h6>
+    <div class='total-tb-style '>
+        <div class="total-tb-tt">
+            <div class="table-tt-con">表格标题</div>
+        </div> 
+        <table class='table layout-fixed table-border table-striped' >
+            <thead>
+                <tr>
+                    <!-- <td><input type="checkbox" ng-click="selectAll()" ng-model='isAll'></td> -->
+                    <td>序号</td>
+                    <td>名称</td>
+                    <td>可信度</td>
+                    <td>所属标签:评判值</td>
+                </tr>
+            </thead>
+            <tbody class="tbody-font">
+                <tr ng-repeat="item in list" >
+                    <!-- <td><input type="checkbox" ng-model="item.ischeck" ng-change="addtoIds(item)"></td> -->
+                    <td>{{item.id}}</td>
+                    <td>{{item.type}}</td>
+                    <td>{{item.kxd}}</td>
+                    <td>{{item.content}}</td>
+                </tr>
+            </tbody>
+        </table>
+    <!-- 标签内容 END -->	
+    </div>
+    
+    <h6>不带描述表头  偶数行有背景颜色</h6>
+    <table class='table layout-fixed table-border table-striped-even' >
+        <thead class="thead-bg">
+            <tr>
+                <!-- <td><input type="checkbox" ng-click="selectAll()" ng-model='isAll'></td> -->
+                <td>序号</td>
+                <td>名称</td>
+                <td>可信度</td>
+                <td>所属标签:评判值</td>
+            </tr>
+        </thead>
+        <tbody class="tbody-font">
+            <tr ng-repeat="item in list" >
+                <!-- <td><input type="checkbox" ng-model="item.ischeck" ng-change="addtoIds(item)"></td> -->
+                <td>{{item.id}}</td>
+                <td>{{item.type}}</td>
+                <td>{{item.kxd}}</td>
+                <td>{{item.content}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

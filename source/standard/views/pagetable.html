@@ -1,0 +1,56 @@
+此文件使用了两个自定义指令，page和page2,具体用法请看page.js和page2.js
+<div>
+  <div>前端分页返回数据为数组即可</div>
+  <table class='table layout-fixed table-border table-striped-even' >
+    <thead class="thead-bg">
+      <tr>
+        <td width="15%">广告组</td>
+        <td width="15%">推广目的</td>
+        <td width="15%">订单</td>
+        <td width="10%">展示数</td>
+        <td width="10%">点击数</td>
+        <td width="10%">点击率</td>
+      </tr>
+    </thead>
+    <tbody class="table-font">
+      <tr ng-repeat="item in data">
+        <td>{{item.name}}-{{item.id}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.id}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.type}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <page page-data="pageingData" data="data" page-size="2"></page>
+</div>
+
+<div class="cut-off"></div>
+
+<div>
+  <div>ajax请求分页</div>
+  <table class='table layout-fixed table-border table-striped-even' >
+    <thead class="thead-bg">
+      <tr>
+        <td width="15%">广告组</td>
+        <td width="15%">推广目的</td>
+        <td width="15%">订单</td>
+        <td width="10%">展示数</td>
+        <td width="10%">点击数</td>
+        <td width="10%">点击率</td>
+      </tr>
+    </thead>
+    <tbody class="table-font">
+      <tr ng-repeat="item in demo_data">
+        <td>{{item.name}}-{{item.id}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.id}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.name}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <page2 page-data="pageModelData" data="demo_data" page-size="1" sign="demo" query-func="queryByPage(num,panel)"></page2>
+</div>

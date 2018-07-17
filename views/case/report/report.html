@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+    <meta charset="UTF-8">
+    <title>报告页</title>
+    <script src="/source/vendor.map.js"></script>
+    <script src="/source/index/app.js"></script>
+    <script src="/source/index/directives/menuNav.js"></script>
+    <script src="/source/index/directives/leftMenu.js"></script>
+    <script src="/source/report/services/chart.js"></script>
+    <script src="/source/report/controllers/analysisMain.js"></script>
+    <script src="/source/report/controllers/analysisCtrl.js"></script>
+
+
+    <link rel="stylesheet" href="/css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/source/standard/css/leftnav.css">
+    <style>
+        .left-nav {
+            width: auto;
+            border: none;
+        }
+    </style>
+    <script>
+        var fields = [{
+            "name": "pv",
+            "text": "浏览量"
+        }, {
+            "name": "uv",
+            "text": "访客数"
+        }, {
+            "name": "visit",
+            "text": "访问次数"
+        }, {
+            "name": "visittime",
+            "text": "平均访问时长"
+        }, {
+            "name": "bounce_rate",
+            "text": "跳出率"
+        }]
+        var mapTypes = [{
+            "name": "china",
+            "text": "中国地图"
+        }, {
+            "name": "world",
+            "text": "世界地图"
+        }]
+        window.location.href = "#bar";
+    </script>
+</head>
+
+<body ng-controller="analysisMain">
+    <div class='header'>
+        <menu-nav menus="menus"></menu-nav>
+    </div>
+    <div class="content">
+        <div class="left">
+            <left-menu menus="reportMenus" currep='bar'></left-menu>
+        </div>
+        <div class="main">
+            <div ng-view></div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+<div>
+    <div class="btn-group btn-group-sm cond-btn" role="group">
+        <button ng-repeat="item in webfields"  ng-class="{'active':$index == 0}" type="button" class="btn item-btn" ng-click="selectBtn($event)">
+            {{item.text}}
+        </button>
+    </div>
+</div>

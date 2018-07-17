@@ -1,0 +1,54 @@
+<script>
+    var mapTypes = [];
+    var panels = {
+        column: {
+            type: 'bar-single',
+            chart: null,
+            options: null,
+            cond: {
+                field: 'pv'
+            },
+            fields: fields
+        },
+        color_column: {
+            type: 'bar-color',
+            chart: null,
+            options: null,
+            cond: {
+                field: 'pv'
+            },
+            fields: fields
+        }
+    };
+</script>
+<div class="report-m" ng-controller="analysisCtrl">
+    <div class="row panel-m">
+        <div class="panel-tt">柱状图</div>
+        <div class="panel-bd">
+            <div class="oper">
+                <div class="btn-group btn-group-sm cond-btn" role="group">
+                    <button ng-repeat="item in panels.column.fields" ng-class="{'active':panels.column.cond.field == item.name}" type="button" class="btn item-btn" ng-click="selectBtn($event);refreshPanel('column');clearPanel('column')">
+              {{item.text}}
+          </button>
+                </div>
+            </div>
+            <div id="column" style="width:100%;height:320px"></div>
+        </div>
+    </div>
+    <div class="row panel-m">
+        <div class="panel-tt">彩色柱状图</div>
+        <div class="panel-bd">
+            <div class="oper">
+                <div class="btn-group btn-group-sm cond-btn" role="group">
+                    <button ng-repeat="item in panels.column.fields" ng-class="{'active':panels.column.cond.field == item.name}" type="button" class="btn item-btn" ng-click="selectBtn($event);refreshPanel('color_column');clearPanel('color_column')">
+              {{item.text}}
+          </button>
+                </div>
+            </div>
+            <div id="color_column" style="width:100%;height:320px"></div>
+        </div>
+    </div>
+
+
+
+</div>

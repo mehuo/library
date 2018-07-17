@@ -1,0 +1,13 @@
+.cond-btn{
+
+}
+.cond-btn .item-btn.active{
+  background: #f95759;
+  color: #fff;
+}
+.cond-btn .item-btn{
+  border: solid 2px transparent;
+  border-radius: 2px;
+  color: #888888;
+  background: #cdcdcd;
+}

@@ -1,0 +1,27 @@
+.btn-min{
+  font-size: 14px;
+  border-radius: 20px;
+  padding: 6px 12px;
+}
+.btn-big{
+  font-size: 14px;
+  border-radius: 20px;
+  padding: 9px 12px;
+}
+.blue-btn{
+  border: solid 1px #f95759;
+  background: #f95759;
+  color: #fff;
+}
+.grad-btn{
+  border: solid 1px #f95759;
+  background: #fff;
+  color: #f95759;
+}
+.add-btn-min{
+  background: #f95759;
+  height: 24px;
+  width: 24px;
+  padding: 8px;
+  border-radius: 20px;
+}

@@ -1,0 +1,124 @@
+<script>
+    var mapTypes = [];
+    var panels = {
+        trend1: {
+            type: 'area-simple',
+            chart: null,
+            options: null,
+            cond: {
+                field: 'pv'
+            },
+            fields: fields
+        },
+        trend2: {
+            type: 'trend-lines',
+            chart: null,
+            options: null,
+            cond: {
+                field: 'pv'
+            },
+            fields: fields
+        },
+        trend3: {
+            type: 'legend-lines',
+            chart: null,
+            options: null,
+            cond: {
+                field: 'pv'
+            },
+            fields: fields
+        },
+        trend4: {
+            type: 'dense-lines',
+            chart: null,
+            options: null,
+            cond: {
+                field: 'pv'
+            },
+            fields: fields
+        },
+        trend5: {
+            type: 'tooltip-lines',
+            chart: null,
+            options: null,
+            cond: {
+                field: 'pv'
+            },
+            fields: fields
+        }
+    };
+</script>
+<div class="report-m" ng-controller="analysisCtrl">
+    <div class="row panel-m">
+        <div class="panel-tt">单条曲线面积图</div>
+        <div class="panel-bd">
+            <div class="oper">
+                <div class="btn-group btn-group-sm cond-btn" role="group">
+                    <button ng-repeat="item in panels.trend1.fields" ng-class="{'active':panels.trend1.cond.field == item.name}" type="button" class="btn item-btn" ng-click="selectBtn($event);refreshPanel('trend1');clearPanel('trend1')">
+              {{item.text}}
+          </button>
+                </div>
+            </div>
+            <div id="trend1" style="width:100%;height:320px"></div>
+        </div>
+    </div>
+    <div class="row panel-m">
+        <div class="panel-tt">多条趋势线</div>
+        <div class="panel-bd">
+            <div class="oper">
+                <div class="btn-group btn-group-sm cond-btn" role="group">
+                    <button ng-repeat="item in panels.trend2.fields" ng-class="{'active':panels.trend2.cond.field == item.name}" type="button" class="btn item-btn" ng-click="selectBtn($event);refreshPanel('trend2');clearPanel('trend2')">
+              {{item.text}}
+          </button>
+                </div>
+            </div>
+            <div id="trend2" style="width:100%;height:320px"></div>
+        </div>
+    </div>
+
+    <div class="row panel-m">
+        <div class="panel-tt">相同图例趋势图</div>
+        <div class="panel-bd">
+            <div class="oper">
+                <div class="btn-group btn-group-sm cond-btn" role="group">
+                    <button ng-repeat="item in panels.trend3.fields" ng-class="{'active':panels.trend3.cond.field == item.name}" type="button" class="btn item-btn" ng-click="selectBtn($event);refreshPanel('trend3');clearPanel('trend3')">
+              {{item.text}}
+          </button>
+                </div>
+            </div>
+            <div id="trend3" style="width:100%;height:320px"></div>
+        </div>
+    </div>
+
+    <div class="row panel-m">
+        <div class="panel-tt">密集趋势图</div>
+        <div class="panel-bd">
+            <div class="oper">
+                <div class="btn-group btn-group-sm cond-btn" role="group">
+                    <button ng-repeat="item in panels.trend4.fields" ng-class="{'active':panels.trend4.cond.field == item.name}" type="button" class="btn item-btn" ng-click="selectBtn($event);refreshPanel('trend4');clearPanel('trend4')">
+              {{item.text}}
+          </button>
+                </div>
+            </div>
+            <div id="trend4" style="width:100%;height:320px"></div>
+        </div>
+    </div>
+
+
+    <div class="row panel-m">
+        <div class="panel-tt">自定义显示tooltip趋势图</div>
+        <div class="panel-bd">
+            <div class="oper">
+                <div class="btn-group btn-group-sm cond-btn" role="group">
+                    <button ng-repeat="item in panels.trend5.fields" ng-class="{'active':panels.trend5.cond.field == item.name}" type="button" class="btn item-btn" ng-click="selectBtn($event);refreshPanel('trend5');clearPanel('trend5')">
+              {{item.text}}
+          </button>
+                </div>
+            </div>
+            <div id="trend5" style="width:100%;height:320px"></div>
+        </div>
+    </div>
+
+
+
+</div>

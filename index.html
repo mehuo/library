@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+    <meta charset="UTF-8">
+    <title>主页</title>
+    <script src="/source/vendor.map.js"></script>
+    <script src="/source/index/app.js"></script>
+    <script src="/source/index/controllers/index.js"></script>
+    <script src="/source/index/directives/menuNav.js"></script>
+    <script src="/source/vendor/swiper/js/swiper.min.js"></script>
+    <link rel="stylesheet" href="/css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="/source/vendor/swiper/css/swiper.min.css"></link>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+    <div class='header' ng-controller="index">
+        <menu-nav menus="menus"></menu-nav>
+    </div>
+    <div class="content">
+        <div class="index-img">
+            <p class="tt">知识在于积累</p>
+            <p class="desc">只有不断的学习，不断积累，才能进步</p>
+        </div>
+    </div>
+</body>
+<script>    
+  window.onload=function(){
+
+  }    
+         
+</script>
+
+</html>

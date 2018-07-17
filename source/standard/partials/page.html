@@ -1,0 +1,33 @@
+<div class="text-center" ng-if="dataJson.pages>1">
+  <div class="pagination">
+    <ul style="display:inline-block">
+      <li ng-if='dataJson.current>1' ng-mouseenter="tools.mouseenterPrev()" ng-mouseleave="tools.mouseleavePrev();" class="previous"  ng-click="dataJson.current<=1||queryByPage(dataJson.current-1);" >
+        <a class="page-prev" style="border-radius: 4px;" href=""><img id="prevpage" class="p-prev-img"  src="/img/page-left.png" /></a></li>
+      </li>
+      <li ng-if='dataJson.pages>5 && dataJson.current>3' class="previous" ng-click="queryByPage(1)">
+        <a class="page-prev" style="border-radius: 4px;" href="">1</a></li>
+      </li>
+      <li ng-if='dataJson.pages>5 && dataJson.current>3' class="previous">
+        <a class="page-prev" style="border-radius: 4px;" href=""><span>&middot;&middot;&middot;</span></a></li>
+      </li>
+      <li ng-model="pageN" ng-repeat="page in pageArr">
+        <a id="page@{{page}}" class="page-num" ng-class='{"on":dataJson.current==page,"page-radius-l":$index==0,"page-radius-r":$index==pageArr.length-1}' ng-click="queryByPage(page)"  
+        href="">{{page}}</a>    
+      </li>
+      <li ng-if='dataJson.pages>5 && dataJson.current<dataJson.pages-2' class="next">
+        <a class="page-next" style="border-radius: 4px;" href=""><span>&middot;&middot;&middot;</span></a></li>
+      </li>
+      <li ng-if='dataJson.pages>5 && dataJson.current<dataJson.pages-2' class="next" ng-click="queryByPage(dataJson.pages)">
+        <a class="page-next" style="border-radius: 4px;" href="">{{dataJson.pages}}</a></li>
+      </li>
+      <li ng-if='dataJson.pages>1&&dataJson.current!=dataJson.pages' ng-mouseenter="tools.mouseenterNext()" ng-mouseleave="tools.mouseleaveNext();" ng-click="dataJson.current>=dataJson.pages||queryByPage(dataJson.current+1)" class="next">
+        <a  class="page-next" style="border-radius: 4px;" href=""><img id="nextpage" class="p-next-img" src="/img/page-right.png"/></a></li>
+      </li>
+    </ul>
+    <div ng-if="dataJson.pages>5" style="display:inline-block">            
+      <span class="page-goto">跳转至</span>
+      <a class="page-goto-num" href="" >页</a>
+      <input class="form-control btn-32 page-input" style="width:70px;height:34px;" type="text" ng-model="selPage" ng-keypress="pageDown($event,selPage);">
+    </div>
+  </div>
+</div>

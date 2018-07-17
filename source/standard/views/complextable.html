@@ -1,0 +1,70 @@
+<div id='downTime' class='downtab' style="width: 100%;">
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="pointer" ng-class="{'active':deliveryInfo.type==0}">
+      <a ng-click="changeType('0',{})" 
+      aria-controls="article" role="tab" data-toggle="tab">广告组</a>
+    </li>
+    <li class='pointer'  role="presentation" ng-class="{'active':deliveryInfo.type==1}">
+      <a aria-controls="activity" role="tab" data-toggle="tab">广告计划</a>
+    </li> 
+    <li class='pointer'  role="presentation" ng-class="{'active':deliveryInfo.type==2}">
+      <a aria-controls="activity" role="tab" data-toggle="tab">广告创意</a>
+    </li> 
+  </ul>
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active">
+      <div class="oper">
+        <div class="batch-oper">
+          <span>批量操作 : </span>
+          <a class="left-16" href="" ng-click="batchOper('open');">打开</a>
+          <a class="left-16" href="" ng-click="batchOper('close');">关闭</a>
+        </div>
+      </div>
+      <div class="table-main">
+        <table class='table layout-fixed table-border table-striped-even' >
+          <thead class="thead-bg">
+            <tr>
+              <td width="10%">全选
+                <input type="checkbox" title="仅当前页生效" 
+                ng-click="selectAll(pageIsAll[dataJson.current])" 
+                ng-model='pageIsAll[dataJson.current]'>
+              </td>
+              <td width="15%" ng-if="deliveryInfo.type=='2'" >创意</td>
+              <td width="15%" ng-if="deliveryInfo.type!='0'">广告计划</td>
+              <td width="15%">广告组</td>
+              <td width="15%" ng-if="deliveryInfo.type=='0'" >推广目的</td>
+              <td width="15%" ng-if="deliveryInfo.type=='0'">订单</td>
+              <td width="15%" ng-if="deliveryInfo.type=='1'">投放时间</td>
+              <td width="15%" ng-if="deliveryInfo.type=='1'">配额</td>
+              <td width="10%">展示数</td>
+              <td width="10%">点击数</td>
+              <td width="10%">点击率</td>
+            </tr>
+          </thead>
+          <tbody class="table-font">
+            <tr ng-repeat="item in columnData">
+              <td><input type="checkbox" ng-model="item.ischeck" ng-change="addtoIds(item)"></td>
+              <td ng-if="deliveryInfo.type=='2'" >{{item.name}}</td>
+              <td ng-if="deliveryInfo.type!='0'" >
+                <a ng-if="deliveryInfo.type=='1'" href="" ng-click="changeType('2',item)">广告计划-{{item.id}}</a>
+                <span ng-if="deliveryInfo.type!='1'">广告计划-{{item.id}}</span>
+              </td>
+              <td>
+                <a ng-if="deliveryInfo.type=='0'"  href="" ng-click="changeType('1',item)">广告组-{{item.id}}</a>
+                <span ng-if="deliveryInfo.type!='0'">广告组-{{item.id}}</span>
+              </td>
+              <td ng-if="deliveryInfo.type=='0'" >{{item.name}}</td>
+              <td ng-if="deliveryInfo.type=='0'">{{item.name}}</td>
+              <td ng-if="deliveryInfo.type=='1'">{{item.name}}</td>
+              <td ng-if="deliveryInfo.type=='1'">{{item.name}}</td>
+              <td>{{item.id}}</td>
+              <td>{{item.name}}</td>
+              <td>{{item.type}}</td>
+            </tr>
+          </tbody>
+        </table>
+        <div ng-include="'/source/standard/partials/page.html'"></div>
+      </div>
+    </div>
+  </div>
+</div>

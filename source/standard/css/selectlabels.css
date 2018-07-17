@@ -1,0 +1,102 @@
+.fyn-tabs .nav {
+    border-bottom: solid 1px #cdcdcd;
+}
+.fyn-tabs .nav-tabs {
+    float: left;
+    text-align: center;
+    line-height: 32px;
+    border: none;
+}
+.fyn-tabs .nav-tabs.active {
+    border: solid 1px #cdcdcd;
+    border-bottom: solid 1px #fff;
+    color: #f95759;
+    margin-bottom: -1px;
+}
+.fyn-tabs .nav-tabs.tabs-hide {
+    border-bottom: none !important;
+}
+.fyn-tabs .tab-content {
+    border: solid 1px #cdcdcd;
+    border-top: solid 1px transparent;
+    min-height: 100px;
+    padding: 15px;
+}
+.fyn-tabs .hide-con {
+    border: none;
+    min-height: 0;
+    margin-bottom: 16px;
+}
+.area-box {
+    padding-bottom: 12px;
+}
+.area-type {
+    width: 50%;
+}
+.check-item {
+    float: left;
+    width: 20%;
+    margin-top: 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    position: relative;
+}
+.check-item input[type="checkbox"] {
+     margin-right: 2px; 
+}
+
+.check-item .city-item {
+    float: left;
+    width: 20%;
+    margin-top: 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.area-citys {
+    position: absolute;
+    top: 5px;
+    left: 60px;
+    padding: 15px;
+    padding-top: 0;
+    z-index: 2;
+    border: 1px solid rgba(249, 87, 89, 0.61);
+    background: #fff;
+    width: 400px;
+    display: none;
+}
+.oper-group {
+    padding-bottom: 12px;
+    text-align: center;
+}
+.on-checkbox {
+    border-top: solid 1px #cdcdcd;
+    padding: 12px 15px;
+    margin: 0 -15px;
+    line-height: 22px;
+}
+.on-checkbox .on-title {
+    float: left;
+    width: 50px;
+}
+.on-checkbox .on-content {
+    float: left;
+    width: calc(100% - 50px);
+    color: #f95759;
+}
+.ad-labels {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #757575;
+    border-radius: 20px;
+    color: #757575;
+    padding: 6px 12px;
+    margin-right: 8px;
+}
+.ad-labels.active {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #f95759;
+    border-radius: 20px;
+    color: #f95759;
+    padding: 6px 12px;
+    margin-right: 8px;
+}

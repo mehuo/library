@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="standard">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <title>开发规范</title>
+    <link rel="SHORTCUT ICON" href="/img/icon.jpg">
+    <link rel="stylesheet" href="/css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" href="/css/standard.css">
+
+    <script src="/source/standard/css_maps.js"></script>
+    <script src="/source/vendor.map.js"></script>
+    <script src="/source/standard/app_maps.js"></script>
+
+</head>
+
+<body>
+    <div class="main-content">
+        <div class="row">
+            <div class="col-md-2">
+                <app-nav></app-nav>
+            </div>
+            <div class="col-md-5">
+                <app-brief></app-brief>
+                <div ui-view>正在加载，请稍候……</div>
+            </div>
+            <div class="col-md-5">
+                <app-view-status></app-view-status>
+                <app-view-source></app-view-source>
+            </div>
+        </div>
+    </div>
+    <div id="cover" class="cover"></div>
+</body>
+
+</html>

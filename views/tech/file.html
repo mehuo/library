@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+    <meta charset="UTF-8">
+    <title>报告页</title>
+    <script src="/source/vendor.map.js"></script>
+    <script src="/source/index/app.js"></script>
+    <script src="/source/index/directives/menuNav.js"></script>
+    <script src="/source/tech/controllers/fileCtrl.js"></script>
+
+    <link rel="stylesheet" href="/css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/main.css?v=1">
+    <style>
+        .left-nav {
+            width: auto;
+            border: none;
+        }
+    </style>
+</head>
+
+<body ng-controller="fileCtrl">
+    <div class='header'>
+        <menu-nav menus="menus"></menu-nav>
+    </div>
+    <div class="content">
+        <div class="left">
+            <div class="tech-type">
+                <a href="/download/添加文档说明.txt" target="_blank">添加文档说明</a>
+            </div>
+            <div ng-repeat = "item in fileList" class="tech-type">
+                <div ng-click="openThis(item);">{{item.type}}</div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="themes-list">
+                <div ng-repeat = "item in themesList" class="tech-themes">
+                    <div>
+                        <span style="padding-right: 12px;">★</span>
+                        <span></span>{{item.theme}}
+                        <span> -- {{item.author}}</span></div>
+                    <div ng-repeat="file in item.file">
+                        <a href="{{file.address}}" download="{{file.fileName}}">{{file.name}} ({{file.fileName}})</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+
+</html>
