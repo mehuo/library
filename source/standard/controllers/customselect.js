@@ -18,18 +18,15 @@ angular.module('standard').controller('ctrl.customselect', function ($scope) {
   $scope.sel_value = $scope.dataSet[2].value;
 
   $scope.selectOne = function(){
-    console.log($scope.sel_value);
+
   }
 
 
-  //输入框
+  //代选输入框
   $scope.data = {
     input_name:'',
     input_value:'',
     name_exist:false
   };
-  $scope.confirm = function(){
-    console.log($scope.data);
-  }
 
 });

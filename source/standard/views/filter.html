@@ -1,6 +1,18 @@
 <div>
-    <div class="btn-group btn-group-sm cond-btn" role="group">
-        <button ng-repeat="item in webfields"  ng-class="{'active':$index == 0}" type="button" class="btn item-btn" ng-click="selectBtn($event)">
+    <div class="filter-group" role="group">
+        <button ng-repeat="item in webfields"  ng-class="{'active':$index == 0}" type="button" class="item" ng-click="selectBtn($event)">
+            {{item.text}}
+        </button>
+    </div>
+
+    <div class="filter-group-primary" role="group">
+        <button ng-repeat="item in webfields"  ng-class="{'active':$index == 0}" type="button" class="item" ng-click="selectBtn($event)">
+            {{item.text}}
+        </button>
+    </div>
+
+    <div class="filter-group-default" role="group">
+        <button ng-repeat="item in webfields"  ng-class="{'active':$index == 0}" type="button" class="item" ng-click="selectBtn($event)">
             {{item.text}}
         </button>
     </div>

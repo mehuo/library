@@ -1,14 +1,10 @@
-<div>
-    <div id='downTime' class='downtab' style="width: 100%;">
-        <ul class="nav nav-tabs" role="tablist">
-        <li style="width: 25%;" role="presentation" class="active pointer"><a href="#common" aria-controls="common" role="tab" data-toggle="tab"> 常用</a></li>
-        <li style="width: 25%;" class='pointer'  role="presentation"><a href="#relativetime" aria-controls="relativetime" role="tab" data-toggle="tab"><!-- 相对时间 -->相对时间</a></li> 
-         <li style="width: 25%;" class='pointer'  role="presentation"><a href="#event" aria-controls="event" role="tab" data-toggle="tab"><!-- 自定义时间 -->自定义时间</a></li> 
-        </ul>
-      <div class="tab-content">
-        <div role="tabpanel" class="tab-pane active" id="common"></div>
-        <div role="tabpanel" class="tab-pane" id="relativetime"></div>
-        <div role="tabpanel" class="tab-pane" id="event"></div> 
-        </div>
-    </div>
+<div class="tab-group-buttons" role="group">
+    <button ng-class="{'active':current_tab == 0}" type="button" class="item" ng-click="current_tab = 0">常用</button>
+    <button ng-class="{'active':current_tab == 1}" type="button" class="item" ng-click="current_tab = 1">最近使用</button>
+    <button ng-class="{'active':current_tab == 2}" type="button" class="item" ng-click="current_tab = 2">相对时间</button>
+</div>
+<div class="tab-group-content">
+    <div ng-show="current_tab == 0">常用</div>
+    <div ng-show="current_tab == 1">最近使用</div>
+    <div ng-show="current_tab == 2">相对时间</div>
 </div>

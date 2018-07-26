@@ -70,6 +70,12 @@ h2.brief {
 
 ul.nav-level-2.nav>li>a {
     padding: 6px 9px;
+    color: #444
+}
+
+ul.nav-level-2.nav>li.active>a {
+    color: #409eff;
+    background:none;
 }
 
 ul.nav-level-2.nav>li>a .glyphicon {

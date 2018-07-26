@@ -9,7 +9,7 @@ angular.module('standard').directive('appViewStatus', function($rootScope, $temp
   return {
     restrict: 'EA',
     scope: {},
-    templateUrl: '/source/standard/views/viewStatus.html',
+    templateUrl: '/source/standard/partials/viewStatus.html',
     link: function(scope, element, attrs) {
       var vm = scope.vm = {};
       $rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {

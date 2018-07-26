@@ -1,27 +1,239 @@
 .btn-min{
   font-size: 14px;
-  border-radius: 20px;
-  padding: 6px 12px;
+  padding: 8px 16px;
+  outline: none;
+  border-radius: 4px;
+  display: inline-block;
 }
-.btn-big{
-  font-size: 14px;
-  border-radius: 20px;
-  padding: 9px 12px;
+/*默认按钮*/
+.mbtn-default{
+  color: #444;
+  border: solid 1px #dcdfe6;
 }
-.blue-btn{
-  border: solid 1px #f95759;
-  background: #f95759;
+.mbtn-default:hover{
+  opacity: 0.9;
+}
+.sbtn-default{
+  color: #444;
+  border: solid 1px #dcdfe6;
+}
+.sbtn-default:hover{
+  border-color: #409eff;
+  color: #409eff;
+}
+.cbtn-default{
+  color: #444;
+  border: solid 1px #dcdfe6;
+  border-radius: 20px;
+}
+.cbtn-default:hover{
+  border-color: #409eff;
+  color: #409eff;
+  background: rgba(64,158,255,0.1);
+}
+
+/*主要按钮*/
+.mbtn-primary{
   color: #fff;
+  border: solid 1px #409eff;
+  background:  #409eff;
 }
-.grad-btn{
-  border: solid 1px #f95759;
-  background: #fff;
-  color: #f95759;
+.mbtn-primary:hover{
+  background: rgba(64,158,255,0.9);
 }
-.add-btn-min{
-  background: #f95759;
-  height: 24px;
-  width: 24px;
-  padding: 8px;
+.sbtn-primary{
+  color:  #409eff;
+  border: solid 1px #409eff;
+  background: rgba(64,158,255,0.1);
+}
+.sbtn-primary:hover{
+  background: #409eff;
+  color: #fff
+}
+.cbtn-primary{
+  color:  #409eff;
+  border: solid 1px #409eff;
+  background: rgba(64,158,255,0.1);
   border-radius: 20px;
+}
+.cbtn-primary:hover{
+  background: #409eff;
+  color: #fff
+}
+/*成功按钮*/
+.mbtn-success{
+  color: #fff;
+  border: solid 1px #67c23a;
+  background:  #67c23a;
+}
+.mbtn-success:hover{
+  background: rgba(103,194,58,0.9);
+}
+.sbtn-success{
+  color:  #67c23a;
+  border: solid 1px #67c23a;
+  background: rgba(103,194,58,0.1);
+}
+.sbtn-success:hover{
+  background: #67c23a;
+  color: #fff
+}
+.cbtn-success{
+  color:  #67c23a;
+  border: solid 1px #67c23a;
+  background: rgba(103,194,58,0.1);
+  border-radius: 20px;
+}
+.cbtn-success:hover{
+  background: #67c23a;
+  color: #fff
+}
+
+/*信息按钮*/
+.mbtn-info{
+  color: #fff;
+  border: solid 1px #909399;
+  background:  #909399;
+}
+.mbtn-info:hover{
+  background: rgba(144,147,153,0.9);
+}
+.sbtn-info{
+  color:  #909399;
+  border: solid 1px #909399;
+  background: rgba(144,147,153,0.1);
+}
+.sbtn-info:hover{
+  background: #909399;
+  color: #fff
+}
+.cbtn-info{
+  color:  #909399;
+  border: solid 1px #909399;
+  background: rgba(144,147,153,0.1);
+  border-radius: 20px;
+}
+.cbtn-info:hover{
+  background: #909399;
+  color: #fff
+}
+
+/*警告按钮*/
+.mbtn-warn{
+  color: #fff;
+  border: solid 1px #e6a23c;
+  background:  #e6a23c;
+}
+.mbtn-warn:hover{
+  background: rgba(230,162,60,0.9);
+}
+.sbtn-warn{
+  color:  #e6a23c;
+  border: solid 1px #e6a23c;
+  background: rgba(230,162,60,0.1);
+}
+.sbtn-warn:hover{
+  background: #e6a23c;
+  color: #fff
+}
+.cbtn-warn{
+  color:  #e6a23c;
+  border: solid 1px #e6a23c;
+  background: rgba(230,162,60,0.1);
+  border-radius: 20px;
+}
+.cbtn-warn:hover{
+  background: #e6a23c;
+  color: #fff
+}
+
+/*错误按钮*/
+.mbtn-error{
+  color: #fff;
+  border: solid 1px #f56c6c;
+  background:  #f56c6c;
+}
+.mbtn-error:hover{
+  background: rgba(245,108,108,0.9);
+}
+.sbtn-error{
+  color:  #f56c6c;
+  border: solid 1px #f56c6c;
+  background: rgba(245,108,108,0.1);
+}
+.sbtn-error:hover{
+  background: #f56c6c;
+  color: #fff
+}
+.cbtn-error{
+  color:  #f56c6c;
+  border: solid 1px #f56c6c;
+  background: rgba(245,108,108,0.1);
+  border-radius: 20px;
+}
+.cbtn-error:hover{
+  background: #f56c6c;
+  color: #fff
+}
+
+.mbtn-icon{
+  height: 36px;
+  width: 36px;
+  display: block;
+  border-radius: 20px;
+  position: relative;
+  display: inline-block;
+}
+.mbtn-icon::before{
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 10px;
+  top: 8px;
+  background-image: url(/img/icons.png);
+  background-size: 802px;
+}
+.mbtn-icon.add{
+  background: #409eff;  
+}
+.mbtn-icon.add::before{
+  background-position: 1px 1px;
+}
+.mbtn-icon.edit{
+  background: #409eff;  
+}
+.mbtn-icon.edit::before{
+  background-position: -70px 1px;
+}
+.mbtn-icon.delete{
+  background: #f56c6b;  
+}
+.mbtn-icon.delete::before{
+  background-position: -17px 1px;
+  height: 17px;
+}
+.mbtn-icon.search{
+  background: #409eff;  
+}
+.mbtn-icon.search::before{
+  background-position: -89px 1px;
+}
+.mbtn-icon.info{
+  background: #909399;  
+}
+.mbtn-icon.info::before{
+  background-position: -51px 1px;
+}
+.mbtn-icon.fav{
+  background: #e7a23b;  
+}
+.mbtn-icon.fav::before{
+  background-position: -108px 1px;
+}
+.mbtn-icon.complete{
+  background: #67c23b;  
+}
+.mbtn-icon.complete::before{
+  background-position: -33px 1px;
 }

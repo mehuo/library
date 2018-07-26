@@ -1,23 +1,32 @@
+.mradio{
+
+}
+.mradio input:first-of-type{
+    margin-left: 0;
+}
 input[type="radio"]{
     width: 0;
-    margin-right:20px;
+    margin-right:14px;
+    margin-left: 12px;
 }
 input[type="radio"]:before {
     content: "";
-    width: 20px;
-    height: 20px;
-    background: url(/img/select.png) no-repeat center;
-    background-position: -15px -41px;
+    width: 18px;
+    height: 18px;
+    background: url(/img/icons.png) no-repeat center;
+    background-position: 0px -21px;
     display: inline-block;
     position: relative;
     top: 0;
     left: 0;
+    background-size: 802px;
+    margin-left: -1px;
+    margin-top: -1px;
 }
 input[type="radio"]:checked:before {
-    background-position: -41px -41px;
+    background-position: -24px -21px;
 
 }
 input[type="radio"]:disabled:before {
-    background-position: -65px -41px;
-
+    background-position: -48px -21px;
 }

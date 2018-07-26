@@ -4,7 +4,7 @@ angular.module('standard').directive('appNav', function(NavData) {
   return {
     restrict: 'EA',
     scope: {},
-    templateUrl: '/source/standard/views/nav.html',
+    templateUrl: '/source/standard/partials/nav.html',
     link: function(scope, element, attrs) {
       
       var sign = window.location.href.split('#/')[1];

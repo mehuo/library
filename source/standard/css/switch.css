@@ -3,7 +3,9 @@
     position: relative;
     top: 5px;
 }
-
+.switch input[type="checkbox"]{
+    margin: 0;
+}
 .switch label {
     width: 100%;
     height: 100%;
@@ -24,12 +26,12 @@
     cursor: pointer;
 }
 
-.switch.demo3 {
-    width: 86px;
+.switch.checkbox {
+    width: 52px;
     height: 26px;
 }
 
-.switch.demo3 label {
+.switch.checkbox label {
     display: block;
     width: 100%;
     height: 100%;
@@ -40,7 +42,7 @@
     color: #fff
 }
 
-.switch.demo3 label:after {
+.switch.checkbox label:after {
     content: "";
     z-index: -1;
     top: -8px;
@@ -57,11 +59,11 @@
     background: linear-gradient(#f2f2f2, #ababab);
 }
 
-.switch.demo3 label:before {
+.switch.checkbox label:before {
     content: "";
 }
 
-.switch.demo3 label i {
+.switch.checkbox label i {
     display: block;
     height: 20px;;
     width: 20px;
@@ -80,12 +82,12 @@
     box-shadow: inset 0 1px 0 white, 0 0 2px rgba(0, 0, 0, 0.3), 0 0px 0px rgba(0, 0, 0, 0.2)
 }
 
-.switch.demo3 label i:after {
+.switch.checkbox label i:after {
     content: "";
 }
 
-.switch.demo3 label i:before {
-    content: "未开启";
+.switch.checkbox label i:before {
+    content: "关";
     text-transform: uppercase;
     font-style: normal;
     color: #fff;
@@ -97,23 +99,23 @@
     width: 86px;
 }
 
-.switch.demo3 input:checked ~ label {
-    background: #428bca;
+.switch.checkbox input:checked ~ label {
+    background: #409eff;
     border: 0;
 }
 
-.switch.demo3 input:checked ~ label i {
-    right: 3%;
+.switch.checkbox input:checked ~ label i {
+    right: 3px;
     top: 3px;
 }
 
-.switch.demo3 input:checked ~ label i:before {
-    content: "已开启";
+.switch.checkbox input:checked ~ label i:before {
+    content: "开";
     color: #fff;
     font-size: 14px;
     font-family: Helvetica, Arial, sans-serif;
     position: absolute;
-    width: 86px;
-    left: -52px;
+    width: 52px;
+    left: -22px;
     line-height: 20px;
 }

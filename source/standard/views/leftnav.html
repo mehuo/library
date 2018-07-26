@@ -1,23 +1,22 @@
 <div>
-    <div class="left-nav">
-        <div id="firstpane"  class="menu_list">
-          <div id='report{{$index}}' class="menu_nav" ng-repeat="item in appReportMenus">
-            <h3 class="menu_head report-omit " title="{{item.name}}" ng-click="clickFirstMenu($index,item.sign)">
-              <div class='icon'>
-                <img ng-src="{{item.imgpath}}">
-              </div>
-              <a class='text'>{{item.name}}
-                <img class='icon-down' src="/img/nav/down.png" >
-              </a>
-            </h3>
-            <div class="menu_body" ng-class="{'show':item.sign==select}">
-              <div ng-repeat="subitem in item.subs" ng-class="{'report-select':subitem.sign==currep}">
-                <a class='menu_child' href="#{{subitem.sign}}" ng-click="goReport(subitem,subitem.url,curapp)">
-                  <div class='text pointer' title="{{subitem.name}}">{{subitem.name}}</div>
-                </a>
-              </div>
-            </div>
+  <div class="left-nav">
+    <div class="menu_list">
+      <div id='report{{$index}}' class="menu_nav" ng-repeat="item in leftMenus">
+        <h3 class="menu_head report-omit " title="{{item.name}}" ng-click="clickFirstMenu($index)">
+          <div class='icon'>
+            <img ng-src="{{item.imgpath}}">
+          </div>
+          <a class='text'>{{item.name}}</a>
+          <div class='icon-down open'></div>
+        </h3>
+        <div class="menu_body" ng-class="{'show':item.sign==curmenu}">
+          <div ng-repeat="subitem in item.subs" ng-class="{'select':subitem.sign==currep}">
+            <a class='menu_child' ng-click="goPages(subitem)">
+              <div class='text pointer' title="{{subitem.name}}">{{subitem.name}}</div>
+            </a>
           </div>
         </div>
+      </div>
     </div>
+  </div>
 </div>

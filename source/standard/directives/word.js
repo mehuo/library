@@ -15,7 +15,7 @@ module.directive('word', function() {
         template: '<div class="classify">'+
                   '  <div class="label-item" ng-repeat="item in words">'+
                   '    <div class="word">{{item}}</div>'+
-                  '    <div class="img"><img class="del" src="/img/word-del.png" alt="" ng-click="deleteWords($index)"></div>'+
+                  '    <div class="img" ng-click="deleteWords($index)"></div>'+
                   '  </div>'+
                   '  <div ng-show="!is_add" class="add" ng-click="addWords()">+&nbsp;添加</div>'+
                   '  <div id="{{sign}}" ng-show="is_add" class="input">'+

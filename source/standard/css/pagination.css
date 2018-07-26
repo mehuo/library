@@ -22,11 +22,33 @@
 
 .pagination li a.page-left {
     padding: 1px 0 1px 0;
-    background: url(/img/page-left.png) no-repeat center center #fff !important;
+    position: relative;
+}
+.pagination li a.page-left:before{
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 16px;
+    left: 8px;
+    top: 9px;
+    background-image: url(/img/icons.png);
+    background-position: -125px -1px;
+    background-size: 802px;
 }
 .pagination li a.page-right {
     padding: 1px 0 1px 0;
-    background: url(/img/page-right.png) no-repeat center center #fff !important;
+    position: relative;
+}
+.pagination li a.page-right:before{
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 16px;
+    left: 13px;
+    top: 9px;
+    background-image: url(/img/icons.png);
+    background-position: -142px -1px;
+    background-size: 802px;
 }
 .pagination li a.page-next {
     padding: 1px 0 1px 0;
@@ -66,37 +88,18 @@
 
 .pagination li a.on {
     background: #fff;
-    color: #f95759;
+    color: #409eff;
     text-decoration: none;
     border: 1px solid #fff;
 }
 
 .pagination li a:hover {
     background: #fff;
-    color: #ff4362;
+    color: #409eff;
     text-decoration: none;
     border: 1px solid #fff;
 }
 
-.page-radius-l {
-    border-radius: 4px 0 0 4px;
-}
-
-.page-radius-r {
-    border-radius: 0 4px 4px 0;
-}
-
-.p-prev-img {
-    margin-right: 8px;
-    padding-left: 4px;
-    margin-top: -3px;
-}
-
-.p-next-img {
-    margin-left: 8px;
-    padding-right: 4px;
-    margin-top: -3px;
-}
 .page-goto{
     margin-left:16px;
     font-size: 16px;

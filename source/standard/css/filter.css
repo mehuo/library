@@ -1,13 +1,92 @@
-.cond-btn{
+/*样式1*/
+.filter-group{
+	height: 36px;
+	margin-bottom: 40px;
+}
+.filter-group .item{
+    border-radius: 2px;
+    color: #444;
+    outline: none;
+    border-radius: 0;
+    border: solid 1px #e6e6e6;
+    border-right: none;
+    height: 100%;
+}
+.filter-group .item.active{
+    background: #409eff;
+    color: #fff;
+    border: solid 1px #409eff;
+    border-right: none;
+}
+.filter-group .item:first-child{
+	border-radius: 4px 0 0 4px;
+}
+.filter-group .item:last-child{
+	border-radius: 0 4px 4px 0;
+	border-right: solid 1px #e6e6e6;
+}
+
+/*样式2*/
+.filter-group-primary{
+	height: 36px;
+	border-bottom: solid 1px #e6e6e6;
+	margin-bottom: 40px;
+}
+.filter-group-primary .item{
+    border-radius: 2px;
+    color: #444;
+    outline: none;
+    height: 100%;
+    border:none;
+    border-bottom: solid 1px #e6e6e6;
+    position: relative;
+}
+.filter-group-primary .item.active{
+    color: #409eff;
+    border-radius: 4px 4px 0 0;
+    border-bottom: none;
 
 }
-.cond-btn .item-btn.active{
-  background: #f95759;
-  color: #fff;
+.filter-group-primary .item.active:before{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	left: 0;
+	top: 101%;
+	background: #409eff;
 }
-.cond-btn .item-btn{
-  border: solid 2px transparent;
-  border-radius: 2px;
-  color: #888888;
-  background: #cdcdcd;
+
+/*样式3*/
+.filter-group-default{
+	height: 36px;
+	border-bottom: solid 1px #e6e6e6;
+	margin-bottom: 40px;
+
+}
+.filter-group-default .item{
+    border-radius: 2px;
+    color: #444;
+    outline: none;
+    height: 100%;
+    border:none;
+    border-bottom: solid 1px #e6e6e6;
+    position: relative;
+}
+.filter-group-default .item.active{
+	border:solid 1px #e6e6e6;
+    color: #409eff;
+    border-radius: 4px 4px 0 0;
+    border-bottom: none;
+    /*background: rgba(64,158,255,0.1);*/
+
+}
+.filter-group-default .item.active:before{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	left: 0;
+	top: 100%;
+	background: #fff;
 }

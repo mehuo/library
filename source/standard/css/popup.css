@@ -36,17 +36,17 @@
     border-radius: 0 0 4px 4px;
 }
 .grad-btn {
-    border: solid 2px #f95759;
+    border: solid 2px #409eff;
     border-radius: 20px;
-    color: #f95759;
+    color: #409eff;
     background: #fff;
 }
 .red-btn {
     z-index: 9;
     color: #ffffff;
     border-radius: 20px;
-    background: #f95759;
-    border: solid 2px #f95759;
+    background: #409eff;
+    border: solid 2px #409eff;
 }
 .btn-32 {
     height: 32px;

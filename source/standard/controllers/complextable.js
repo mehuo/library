@@ -23,6 +23,7 @@ angular.module('standard').controller('ctrl.complextable', function ($scope,$htt
 
   //获取数据
   function getList(info){
+    console.log(info);
     var r={"status":0,"statusinfo":"","data":{"total":10,"pages":10,"current":1,"data":[{"name":"111","id":1},{"name":"222","id":2},{"name":"333","id":3},{"name":"444","id":4},{"name":"555","id":5}]}}
     if(info.current){
       r.data.current = info.current;
@@ -123,7 +124,7 @@ angular.module('standard').controller('ctrl.complextable', function ($scope,$htt
     if($scope.itemIds.length>0){
       alert($scope.itemIds);
     }else{
-      layer.msg('请至少选择一条记录进行操作');
+      alert('请至少选择一条记录进行操作');
     }
   }
 

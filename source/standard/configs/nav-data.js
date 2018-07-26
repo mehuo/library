@@ -12,10 +12,8 @@ angular.module('standard').constant('NavData', [
         items: [
             {state: 'buttons',authors: ['魅惑'],label: '按钮'},
             {state: 'switch',authors: ['魅惑'],label: '开关样式'},
-            {state: 'inputs',authors: ['魅惑'],label: '输入框'},
             {state: 'radio',authors: ['魅惑'],label: '单选按钮'},
             {state: 'checkbox',authors: ['魅惑'],label: '复选框'},
-            {state: 'dropdown',authors: ['魅惑'],label: '下拉框'},
             {state: 'searchbox',authors: ['魅惑'],label: '搜索框'},
             {state: 'table',authors: ['魅惑'],label: '表格样式'},
             {state: 'scrollbar',authors: ['媛媛'],label: '修改滚动条位置'},
@@ -32,7 +30,6 @@ angular.module('standard').constant('NavData', [
             {state: 'complextable',authors: ['魅惑'],label: '复杂表格'},
             {state: 'pagetable',authors: ['魅惑'],label: '分页显示'},
             {state: 'selectlabels',authors: ['魅惑'],label: '标签选择'},
-            {state: 'panel',authors: ['魅惑'],label: '分析面板'},
             {state: 'tab',authors: ['魅惑'],label: '标签tab'},
             {state: 'leftnav',authors: ['魅惑'],label: '左侧导航'},
             {state: 'daterangepicker',authors: ['魅惑'],label: '日期选择'},

@@ -1,16 +1,19 @@
 <div>
 	<h4>自定义的下拉框</h4>
   	<angular-select listdata="dataSet" selectedmodel="sel_value" selectedop="''" showkey="'name'" valuekey="'value'" changefunc="selectOne" ></angular-select>  
+  	<div>{{sel_value}}</div>
 </div>
 
 
 <div style="margin-top: 50px;">
 	<h4>待搜索的数组，一个输入框</h4>
-	<div style="width: 400px;">
-		<angular-input placeholder="请输入融合号" modelval="data.input_name" modelkey="data.input_value" isexist="data.name_exist" listdata="dataSet" valkey="value" showkey="name"></angular-input>
+	<div>
+		输入后将在一下内容中进行检索
+		<span ng-repeat="item in dataSet">{{item.name}}<span ng-show="!$last">,</span></span>
 	</div>
 	<div>
-		<a class="btn red-btn" ng-click="confirm();">确认</a>
+		<angular-input placeholder="请输入所选城市" modelval="data.input_name" modelkey="data.input_value" isexist="data.name_exist" listdata="dataSet" valkey="value" showkey="name"></angular-input>
 	</div>
+	<div>{{data}}</div>
 </div>
 

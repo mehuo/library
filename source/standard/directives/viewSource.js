@@ -28,7 +28,7 @@ angular.module('standard').directive('appViewSource', function($rootScope, $temp
   return {
     restrict: 'EA',
     scope: {},
-    templateUrl: '/source/standard/views/viewSource.html',
+    templateUrl: '/source/standard/partials/viewSource.html',
     link: function(scope, element, attrs) {
       var vm = scope.vm = {};
       var activeFile = 1;

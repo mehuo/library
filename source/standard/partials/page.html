@@ -2,7 +2,7 @@
   <div class="pagination">
     <ul style="display:inline-block">
       <li ng-if='dataJson.current>1' ng-mouseenter="tools.mouseenterPrev()" ng-mouseleave="tools.mouseleavePrev();" class="previous"  ng-click="dataJson.current<=1||queryByPage(dataJson.current-1);" >
-        <a class="page-prev" style="border-radius: 4px;" href=""><img id="prevpage" class="p-prev-img"  src="/img/page-left.png" /></a></li>
+        <a class="page-left" style="border-radius: 4px;" href=""></a></li>
       </li>
       <li ng-if='dataJson.pages>5 && dataJson.current>3' class="previous" ng-click="queryByPage(1)">
         <a class="page-prev" style="border-radius: 4px;" href="">1</a></li>
@@ -21,7 +21,7 @@
         <a class="page-next" style="border-radius: 4px;" href="">{{dataJson.pages}}</a></li>
       </li>
       <li ng-if='dataJson.pages>1&&dataJson.current!=dataJson.pages' ng-mouseenter="tools.mouseenterNext()" ng-mouseleave="tools.mouseleaveNext();" ng-click="dataJson.current>=dataJson.pages||queryByPage(dataJson.current+1)" class="next">
-        <a  class="page-next" style="border-radius: 4px;" href=""><img id="nextpage" class="p-next-img" src="/img/page-right.png"/></a></li>
+        <a  class="page-right" style="border-radius: 4px;" href=""></a></li>
       </li>
     </ul>
     <div ng-if="dataJson.pages>5" style="display:inline-block">            

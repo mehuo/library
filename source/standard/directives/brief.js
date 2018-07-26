@@ -3,7 +3,7 @@
 angular.module('standard').directive('appBrief', function($rootScope) {
   return {
     restrict: 'EA',
-    templateUrl: '/source/standard/views/brief.html',
+    templateUrl: '/source/standard/partials/brief.html',
     scope: {},
     link: function(scope, element, attrs) {
       var vm = scope.vm = {};

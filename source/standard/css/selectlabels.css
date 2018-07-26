@@ -10,7 +10,7 @@
 .fyn-tabs .nav-tabs.active {
     border: solid 1px #cdcdcd;
     border-bottom: solid 1px #fff;
-    color: #f95759;
+    color: #409eff;
     margin-bottom: -1px;
 }
 .fyn-tabs .nav-tabs.tabs-hide {
@@ -53,14 +53,14 @@
     text-overflow: ellipsis;
     overflow: hidden;
 }
-.area-citys {
+.subs-box{
     position: absolute;
     top: 5px;
     left: 60px;
     padding: 15px;
     padding-top: 0;
     z-index: 2;
-    border: 1px solid rgba(249, 87, 89, 0.61);
+    border: 1px solid rgba(64,158,255, 0.61);
     background: #fff;
     width: 400px;
     display: none;
@@ -82,7 +82,7 @@
 .on-checkbox .on-content {
     float: left;
     width: calc(100% - 50px);
-    color: #f95759;
+    color: #409eff;
 }
 .ad-labels {
     background: #fff none repeat scroll 0 0;
@@ -94,9 +94,9 @@
 }
 .ad-labels.active {
     background: #fff none repeat scroll 0 0;
-    border: 1px solid #f95759;
+    border: 1px solid #409eff;
     border-radius: 20px;
-    color: #f95759;
+    color: #409eff;
     padding: 6px 12px;
     margin-right: 8px;
 }

@@ -19,7 +19,7 @@ module.directive('page', function() {
                   '<div class="pagination">'+
                   '<ul style="display:inline-block">'+
                   '<li class="previous"  ng-if="pageN>1"  ng-click="pageN<=1||queryToBefore(pageN-1);">'+
-                  ' <a class="page-prev" href=""><img id="prevpage" class="p-prev-img"  src="/img/page-left.png" /></a>'+
+                  ' <a class="page-left" href=""></a>'+
                   '</li>'+
                   '<li ng-if="number_of_pages>5 && pageN>3" class="previous" ng-click="queryByPage(1);">'+
                   ' <a class="page-prev" href="">1</a></li>'+
@@ -38,7 +38,7 @@ module.directive('page', function() {
                   '  <a class="page-next"  href="">{{number_of_pages}}</a></li>'+
                   '</li>'+
                   '<li class="next" ng-if="pageN<number_of_pages" ng-click="pageN>=number_of_pages||queryToNext(pageN+1)" >'+ 
-                  ' <a  class="page-next" href=""><img id="nextpage" class="p-next-img" src="/img/page-right.png"/></a>'+
+                  ' <a  class="page-right" href=""></a>'+
                   '</li>'+
                   '</ul>'+
                   '<div ng-if="number_of_pages>5" style="display:inline-block">'+

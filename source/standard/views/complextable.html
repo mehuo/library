@@ -5,10 +5,10 @@
       aria-controls="article" role="tab" data-toggle="tab">广告组</a>
     </li>
     <li class='pointer'  role="presentation" ng-class="{'active':deliveryInfo.type==1}">
-      <a aria-controls="activity" role="tab" data-toggle="tab">广告计划</a>
+      <a ng-click="changeType('1',{})"  aria-controls="activity" role="tab" data-toggle="tab">广告计划</a>
     </li> 
     <li class='pointer'  role="presentation" ng-class="{'active':deliveryInfo.type==2}">
-      <a aria-controls="activity" role="tab" data-toggle="tab">广告创意</a>
+      <a ng-click="changeType('2',{})"  aria-controls="activity" role="tab" data-toggle="tab">广告创意</a>
     </li> 
   </ul>
   <div class="tab-content">

@@ -1,8 +1,11 @@
 <div>
-    <div>
+    <div class="mcheckbox">
         <h6>这是一组复选框</h6>
         <span ng-repeat="item in fav">
           <input ng-click="check(item.id)" name="fav" type="checkbox" ng-model="item.checked" value="{{item.id}}">{{item.name}}
+        </span>
+        <span>
+          <input name="fav" type="checkbox" disabled value="">不可选
         </span>
     </div>
 </div>
