@@ -46,6 +46,7 @@ document.write('<script src="'+rootPath+'/controllers/password.js"></script>')
 document.write('<script src="'+rootPath+'/controllers/customselect.js"></script>')
 document.write('<script src="'+rootPath+'/controllers/alert.js"></script>')
 document.write('<script src="'+rootPath+'/controllers/words.js"></script>')
+document.write('<script src="'+rootPath+'/controllers/sliderbox.js"></script>')
 
 
 document.write('<script src="'+rootPath+'router.js"></script>')

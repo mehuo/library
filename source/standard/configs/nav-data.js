@@ -40,8 +40,10 @@ angular.module('standard').constant('NavData', [
     {
         label:'其他组件',
         items:[
-            {state: 'password',authors: ['魅惑'],label: '验证密码强度'},
-            {state: 'alert',authors: ['魅惑'],label: '自定义提示框'},
+            {state: 'password',authors: ['魅惑'],label: '密码强度'},
+            {state: 'alert',authors: ['魅惑'],label: '提示框'},
+            {state: 'sliderbox',authors: ['魅惑'],label: '滑块'}
+
         ]
     }
 ]);

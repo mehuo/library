@@ -29,6 +29,7 @@ document.write('<link rel="stylesheet" href="'+rootPath+'css/password.css"></lin
 document.write('<link rel="stylesheet" href="'+rootPath+'css/customselect.css"></link rel="stylesheet">')
 document.write('<link rel="stylesheet" href="'+rootPath+'css/alert.css"></link rel="stylesheet">')
 document.write('<link rel="stylesheet" href="'+rootPath+'css/words.css"></link rel="stylesheet">')
+document.write('<link rel="stylesheet" href="'+rootPath+'css/sliderbox.css"></link rel="stylesheet">')
 
 
 
