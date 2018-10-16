@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>首页</title>
+	<script src="http://221.122.73.181:3000/static/tpl/recom/default/js/jquery.js"></script>
+	<style>
+		*{
+			margin:0;
+			padding: 0;
+		}
+		nav{	
+			height: 60px;
+		    border: solid 1px #cdcdcd;
+		    position: fixed;
+		    width: 100%;
+		    background: #fff;	
+		    z-index: 100;	
+		}
+		nav .logo{
+			width: 200px;
+			height: 20px;
+			float: left;
+			text-align: center;
+			line-height: 60px;
+		}
+		nav .logo img{
+			width: 140px;
+			margin-top: 6px;
+			margin-left: 10px;
+		}
+		nav ul li{
+			list-style: none;
+			float: left;
+			line-height: 60px;
+			padding: 0 16px;
+		}
+		nav ul li:hover{
+			border-bottom: solid 3px #5cc5ec;
+			color: #5cc5ec;
+		}
+		nav ul li.active{
+			border-bottom: solid 3px #5cc5ec;	
+			color: #5cc5ec;
+		}
+		.main{
+			position: relative;
+			top: 60px;
+		}		
+		.main .left{
+			width: 200px;
+		    float: left;
+		    position: fixed;
+		    height: calc(100% - 60px);
+		    border-right: solid 1px #cdcdcd;
+		    top: 60px;
+		    overflow: auto;
+		}
+		.main .content{
+			float: right;
+			width: calc(100% - 200px);
+			padding: 24px;
+			box-sizing: border-box;
+		}
+		.main .content .desc{
+			margin:16px 8px;
+			margin-bottom: 40px;
+		}
+		.main .content img{
+			width: 100%;
+		}
+		.main #menus{
+			padding: 0;
+		}
+		.main #menus ul li{
+			list-style: none;
+			padding: 12px 0;
+			color: #757575;
+    		font-size: 14px;
+    		padding-left: 32px;
+    		box-sizing: border-box;
+		}
+		.main #menus ul li:hover{
+			border-left: solid 4px #5cc5ec;
+		}
+		.main #menus ul li.active{
+			border-left: solid 4px #5cc5ec;
+		}
+
+	</style>
+</head>
+<body>
+	<nav>
+		<div class="logo"><img src="img/logo.png" alt=""></div>
+		<ul>
+			<li data-type="1" class="active">人民日报</li>
+			<li data-type="2">信鸽资讯</li>
+			<li data-type="3">H5</li>
+			<li data-type="4">党媒融合号</li>
+			<!-- <li data-type="kb">知识库</li> -->
+			<!-- <li data-type="jl">网页版简历</li> -->
+		</ul>
+	</nav>
+	<div class="main">
+		<div class="left">
+			<div id="menus"></div>
+		</div>
+		<div class="content">
+		</div>
+	</div>
+	
+</body>
+
+<script>
+	var menus =  {}
+	var type = 1;
+	$.getJSON('data.json',function(data){
+		menus = data;
+		setMenus(menus[type]);
+	})
+
+	$('nav li').on('click',function(e){
+		type = $(e.target).data().type;
+		$(e.target).addClass('active');
+		$(e.target).siblings('li').removeClass('active');
+		if(type == 'kb'){
+			window.open('http://139.199.37.16:9090/');
+		}else if(type == 'jl'){
+			window.open('http://221.122.73.181:3000/static/tpl/fyn-test/swiper/index.html');
+		}else{
+			setMenus(menus[type]);
+		}
+	})
+
+	function setMenus(ms){
+		var menus_html = '<ul>';
+		for (var i = 0; i < ms.length; i++) {
+			menus_html += '<li data-index="'+i+'">'+ms[i].name+'</li>'
+		}
+		menus_html += '<ul>';
+		$("#menus").empty().append(menus_html);
+		$('#menus li').first().addClass('active');
+		setContent(menus[type][0]);
+		$('#menus li').on('click',function(e){
+			$(e.target).addClass('active');
+			$(e.target).siblings('li').removeClass('active');
+			var li_data = $(e.target).data();
+			li_data.name = $(e.target).text();
+			if(menus[type][li_data.index].imgs){
+				li_data.imgs = menus[type][li_data.index].imgs;
+			}
+			if(menus[type][li_data.index].type){
+				li_data.type = menus[type][li_data.index].type;
+			}
+			if(menus[type][li_data.index].link){
+				li_data.link = menus[type][li_data.index].link;
+			}
+			if(menus[type][li_data.index].desc){
+				li_data.desc = menus[type][li_data.index].desc;
+			}
+			setContent(li_data);
+		})
+	}
+
+	
+
+	function setContent(data){
+		var content_dom = $('.content');
+		var content_html = '';
+		if(data.type && data.type == 'link'){
+			content_html += '<div class="link"><a target="_blank" href="'+data.link+'">'+data.link+'<a/></div>';
+			content_html += '<div class="desc">'+data.desc+'</div>';
+		}else{
+			if(data.imgs && data.imgs.length>0){
+				for (var i = 0; i < data.imgs.length; i++) {
+					content_html += '<div class="desc">'+data.imgs[i].desc+'</div>';
+					if(data.imgs[i].src && data.imgs[i].src.length>0){
+						for (var j = 0; j < data.imgs[i].src.length; j++) {
+							if(data.imgs[i].width){
+								content_html += '<img src="'+data.imgs[i].src[j]+'" title="'+data.name+'" style="width:'+data.imgs[i].width+'"/></br>';
+							}else{
+								content_html += '<img src="'+data.imgs[i].src[j]+'" title="'+data.name+'"/></br>';
+							}
+						}
+					}
+				}
+			}
+		}
+		content_dom.empty().append(content_html);
+	}
+
+</script>
+
+</html>

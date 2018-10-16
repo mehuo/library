@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>添加</title>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/vue.js"></script>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div id="add">
+		<ul class="nav">
+			<li v-on:click="setPanel('in')">收入</li>
+			<li v-on:click="setPanel('out')">支出</li>
+		</ul>
+		<div class="income in">
+			<div class="clearfix" v-for="(item,index) in incomes">
+				<div class="desc">{{item.desc}}</div>
+				<div class="value">
+					<span>{{item.value}}</span>
+					<img class="edit" v-on:click="edit('in',item,index)" src="img/edit.png" alt="">
+					<img class="delete" v-on:click="deleteI('in',index)" src="img/delete.png" alt="">
+				</div>
+			</div>
+			<div>
+				<div class="desc">
+					<input type="text" v-model="add_item.desc"/>
+				</div>
+				<div class="value">
+					<input type="text" v-model="add_item.value" v-on:click="emptyValue($event)"/>
+				</div>
+				<a v-if="!in_edit" v-on:click="add('in')">添加</a>
+				<a v-if="in_edit" v-on:click="doEdit('in')">修改</a>
+			</div>
+		</div>
+		<div class="expend in">
+			<div class="clearfix" v-for="(item,index) in expends">
+				<div class="desc">{{item.desc}}</div>
+				<div class="value">
+					<span>{{item.value}}</span>
+					<img class="edit" v-on:click="edit('out',item,index)" src="img/edit.png" alt="">
+					<img class="delete" v-on:click="deleteI('out',index)" src="img/delete.png" alt="">
+				</div>
+			</div>
+			<div>
+				<div class="desc">
+					<input type="text" v-model="out_add_item.desc"/>
+				</div>
+				<div class="value">
+					<input type="text" v-model="out_add_item.value" v-on:click="emptyValue($event)"/>
+				</div>
+				<a v-if="!out_edit" v-on:click="add('out')">添加</a>
+				<a v-if="out_edit" v-on:click="doEdit('out')">修改</a>
+			</div>
+		</div>
+		<div class="calculate" v-on:click="calculateFunc()">计算</div>
+		<div class="result">
+			<span>{{in_value}}</span><span>-</span><span>{{out_value}}</span>
+			<div id="result_num" class="r_num">{{gap}}</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="js/add.js"></script>
+
+</html>
